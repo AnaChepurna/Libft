@@ -48,5 +48,5 @@ char	*ft_itoa_base(int n, int base)
 
 int	main(void)
 {
-printf("%s\n", ft_itoa_base(424242000, 16));
+printf("%s\n%s\n%s\n", ft_itoa_base('f', 2), ft_itoa_base('o', 2), ft_itoa_base('x', 2));
 }
