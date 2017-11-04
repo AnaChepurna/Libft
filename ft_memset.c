@@ -1,13 +1,29 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/04 12:59:33 by achepurn          #+#    #+#             */
+/*   Updated: 2017/11/04 17:08:14 by achepurn         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <libft.h>
 
-void	*memset(void *memptr, int val, size_t num)
+void	*ft_memset(void *memptr, int val, size_t num)
 {
-	int	i;
+	int		i;
+	char	*buf;
 
+	if (!memptr)
+		return (NULL);
 	i = 0;
-	while (i < num)
+	buf = memptr;
+	while (i < (int)num)
 	{
-		memptr[i] = val;
+		buf[i] = val;
 		i++;
 	}
 	return (memptr);

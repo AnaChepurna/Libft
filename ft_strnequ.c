@@ -6,14 +6,18 @@
 /*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 12:12:52 by achepurn          #+#    #+#             */
-/*   Updated: 2017/10/30 12:15:12 by achepurn         ###   ########.fr       */
+/*   Updated: 2017/11/04 12:42:04 by achepurn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strnequ(char const *s1, char const *c2, size_t n)
+#include <libft.h>
+
+int		ft_strnequ(char const *s1, char const *s2, size_t n)
 {
 	int		i;
 
+	if (!s1 || !s2)
+		return (0);
 	i = 0;
 	while ((s1[i] || s2[i]) && i < n)
 	{

@@ -1,5 +1,16 @@
-#include <stdlib.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa_base.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/04 12:51:02 by achepurn          #+#    #+#             */
+/*   Updated: 2017/11/04 14:03:02 by achepurn         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <libft.h>
 
 static int	a_len(int n, int base)
 {
@@ -32,21 +43,16 @@ static void	put_a(int n, char *str, int len, int base)
 	str[len] = map[n];
 }
 
-char	*ft_itoa_base(int n, int base)
+char		*ft_itoa_base(int n, int base)
 {
 	char	*res;
-	int	i;
-	int	len;
+	int		i;
+	int		len;
 
 	if (n < 0 || base < 0 || base > 36)
 		return ("");
 	len = a_len(n, base);
-	res = (char*) malloc (sizeof(char) * len);
+	res = (char*)malloc(sizeof(char) * len);
 	put_a(n, res, len - 1, base);
 	return (res);
-}
-
-int	main(void)
-{
-printf("%s\n%s\n%s\n", ft_itoa_base('f', 2), ft_itoa_base('o', 2), ft_itoa_base('x', 2));
 }

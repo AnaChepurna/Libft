@@ -6,16 +6,20 @@
 /*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/26 16:38:02 by achepurn          #+#    #+#             */
-/*   Updated: 2017/10/26 16:54:26 by achepurn         ###   ########.fr       */
+/*   Updated: 2017/11/04 16:20:37 by achepurn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <libft.h>
 
 char	*ft_strdup(char *src)
 {
 	int		i;
 	char	*dup;
 
-	dup = (char *) malloc(sizeof(char) * (ft_strlen(src) + 1));
+	if (!src)
+		return (NULL);
+	dup = (char *)malloc(sizeof(char) * (ft_strlen(src) + 1));
 	if (dup)
 	{
 		i = 0;

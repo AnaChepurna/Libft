@@ -1,16 +1,30 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/04 13:21:50 by achepurn          #+#    #+#             */
+/*   Updated: 2017/11/04 13:53:31 by achepurn         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <libft.h>
 
 char	*strrchr(const char *s, int c)
 {
-	int	i;
+	int		i;
 
-	i = 0
+	if (!s)
+		return (NULL);
+	i = 0;
 	while (s[i])
 		i++;
 	while (i >= 0)
 	{
-		if (str[i] == c)
-			return (&str[i]);
+		if (s[i] == c)
+			return (&s[i]);
 		i--;
 	}
 	return (NULL);

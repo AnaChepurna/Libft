@@ -6,14 +6,18 @@
 /*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 11:57:35 by achepurn          #+#    #+#             */
-/*   Updated: 2017/10/30 12:20:45 by achepurn         ###   ########.fr       */
+/*   Updated: 2017/11/04 12:39:59 by achepurn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strequ(char const *s1, char const *c2)
+#include <libft.h>
+
+int		ft_strequ(char const *s1, char const *s2)
 {
 	int		i;
 
+	if (!s1 || !s2)
+		return (0);
 	i = 0;
 	while (s1[i] || s2[i])
 	{

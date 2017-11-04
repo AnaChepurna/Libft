@@ -1,11 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/04 13:18:04 by achepurn          #+#    #+#             */
+/*   Updated: 2017/11/04 14:05:46 by achepurn         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <libft.h>
 
 char	*ft_strcat(char *dest, const char *src)
 {
-	int	i
+	int		i;
 
+	if (!dest || !src)
+		return (NULL);
 	i = 0;
-	while(dest[i])
+	while (dest[i])
 		i++;
 	while (*src)
 	{

@@ -6,9 +6,11 @@
 /*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 12:57:23 by achepurn          #+#    #+#             */
-/*   Updated: 2017/10/30 13:26:31 by achepurn         ###   ########.fr       */
+/*   Updated: 2017/11/04 14:23:12 by achepurn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <libft.h>
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -16,9 +18,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		len2;
 	char	*res;
 
+	if (!s1 || !s2)
+		return (NULL);
 	len1 = ft_strlen(s1);
 	len2 = ft_strlen(s2);
-	res = (char *) malloc(sizeof(int) (len1 + len2 + 1));
+	res = (char *)malloc(sizeof(int) * (len1 + len2 + 1));
 	if (res)
 	{
 		ft_strcpy(res, s1);

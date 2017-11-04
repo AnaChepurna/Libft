@@ -6,19 +6,23 @@
 /*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/26 21:00:17 by achepurn          #+#    #+#             */
-/*   Updated: 2017/10/26 21:07:19 by achepurn         ###   ########.fr       */
+/*   Updated: 2017/11/04 13:57:41 by achepurn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <libft.h>
 
 void	ft_strclr(char *s)
 {
 	int		i;
 
-	i = 0;
-	while(s[i])
+	if (s)
 	{
-		s[i] = '\0';
-		i++;
+		i = 0;
+		while (s[i])
+		{
+			s[i] = '\0';
+			i++;
+		}
 	}
 }

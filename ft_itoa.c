@@ -1,7 +1,18 @@
-#include <stdlib.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/04 12:50:08 by achepurn          #+#    #+#             */
+/*   Updated: 2017/11/04 14:07:21 by achepurn         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int	a_len(int n)
+#include <libft.h>
+
+static int	a_len(int n)
 {
 	int	res;
 
@@ -18,7 +29,7 @@ int	a_len(int n)
 	return (res);
 }
 
-void	put_a(int n, char *str, int len)
+static void	put_a(int n, char *str, int len)
 {
 	if (n < 0)
 	{
@@ -36,21 +47,16 @@ void	put_a(int n, char *str, int len)
 	str[len] = n + '0';
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	char	*res;
-	int	i;
-	int	len;
+	int		i;
+	int		len;
 
 	if (n == -2147483648)
 		return ("-2147483648");
 	len = a_len(n);
-	res = (char*) malloc (sizeof(char) * len);
+	res = (char*)malloc(sizeof(char) * len);
 	put_a(n, res, len - 1);
 	return (res);
-}
-
-int	main(void)
-{
-printf("%s\n", ft_itoa(-337774));
 }

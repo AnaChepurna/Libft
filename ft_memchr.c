@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/04 13:12:17 by achepurn          #+#    #+#             */
+/*   Updated: 2017/11/04 13:13:28 by achepurn         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <libft.h>
 
 void	*ft_memchr(const void *s, int c, size_t n)
@@ -5,11 +17,14 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	int	i;
 
 	i = 0;
-	while (i < n)
+	if (!s)
 	{
-		if (s[i] == c)
-			return (&s[i]);
-		i++;
+		while (i < n)
+		{
+			if (s[i] == c)
+				return (&s[i]);
+			i++;
+		}
 	}
 	return (NULL);
 }
