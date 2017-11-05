@@ -46,9 +46,10 @@ static void	put_a(int n, char *str, int len, int base)
 char		*ft_itoa_base(int n, int base)
 {
 	char	*res;
-	int		i;
 	int		len;
 
+	if (base == 10)
+		return (ft_itoa(n));
 	if (n < 0 || base < 0 || base > 36)
 		return ("");
 	len = a_len(n, base);

@@ -6,6 +6,6 @@ void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 	{
 		(*f)(lst);
 		if (lst->next)
-			ft_lstiter(les->next, f);
+			ft_lstiter(lst->next, f);
 	}
 }

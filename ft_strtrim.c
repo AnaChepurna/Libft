@@ -24,6 +24,12 @@ char	*ft_strtrim(char const *s)
 	while (s[start] == ' ' || s[start] == '\n' || s[start] == '\t')
 		start++;
 	finish = ft_strlen(s) - 1;
+	if (start > finish)
+		{
+			res = (char*)malloc(sizeof(char) * 1);
+			res[0] = '\0';
+			return (res);
+		}
 	while (s[finish] == ' ' || s[finish] == '\n' || s[finish] == '\t')
 		finish--;
 	res = (char *)malloc(sizeof(char) * (finish - start + 2));

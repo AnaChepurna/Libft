@@ -12,29 +12,22 @@
 
 #include <libft.h>
 
-void	*memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	void	*buf;
-	int		i;
+	char	*ptr1;
+	const char	*ptr2;
+	unsigned int		i;
 
 	if (!dest || !src)
 		return (NULL);
-	buf = malloc(sizeof(void) * n);
-	if (buf)
-	{
-		i = 0;
-		while (i < n)
-		{
-			buf[i] = src[i];
-			i++;
-		}
-		i = 0;
-		while (i < n)
-		{
-			dst[i] = buf[i];
-			i++;
-		}
-		free(buf);
-	}
+	ptr1 = dest;
+	ptr2 = src;
+	i = -1;
+	if (ptr2 < ptr1)
+		while ((int)(--n) >= 0)
+			ptr1[n] = ptr2[n];
+	else
+		while (++i < n)
+			ptr1[i] = ptr2[i];
 	return (dest);
 }

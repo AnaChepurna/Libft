@@ -24,7 +24,10 @@ char	*ft_strdup(char *src)
 	{
 		i = 0;
 		while (src[i])
-			dup[i] = src[i++];
+		{
+			dup[i] = src[i];
+			i++;
+		}
 		dup[i] = '\0';
 	}
 	return (dup);

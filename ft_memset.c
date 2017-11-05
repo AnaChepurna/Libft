@@ -15,7 +15,7 @@
 void	*ft_memset(void *memptr, int val, size_t num)
 {
 	int		i;
-	char	*buf;
+	unsigned char	*buf;
 
 	if (!memptr)
 		return (NULL);
@@ -23,7 +23,7 @@ void	*ft_memset(void *memptr, int val, size_t num)
 	buf = memptr;
 	while (i < (int)num)
 	{
-		buf[i] = val;
+		buf[i] = (unsigned char)val;
 		i++;
 	}
 	return (memptr);

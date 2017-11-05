@@ -47,16 +47,26 @@ static void	put_a(int n, char *str, int len)
 	str[len] = n + '0';
 }
 
+static char	*min_int_helper(void)
+{
+	char	*min_int;
+	char	*res;
+
+	min_int = "-2147483648";
+	res = ft_strdup(min_int);
+	return(res);
+}
+
 char		*ft_itoa(int n)
 {
 	char	*res;
-	int		i;
 	int		len;
 
 	if (n == -2147483648)
-		return ("-2147483648");
+		return (min_int_helper());
 	len = a_len(n);
 	res = (char*)malloc(sizeof(char) * len);
-	put_a(n, res, len - 1);
+	if (res)
+		put_a(n, res, len - 1);
 	return (res);
 }

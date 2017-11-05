@@ -66,9 +66,11 @@ char		**ft_strsplit(const char *s, char c)
 	int		len;
 	char	**res;
 
+	if (!s)
+		return (NULL);
 	len = recursive_count(s, c);
-	printf("%i\n", len);
 	res = (char **)malloc(sizeof(char *) * (len + 1));
-	recursive_split(res, s, c);
+	if (res)
+		recursive_split(res, s, c);
 	return (res);
 }

@@ -12,18 +12,22 @@
 
 #include <libft.h>
 
-void	*memccpy(void *dest, const void *src, int c, size_t n)
+void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
-	int	i;
+	unsigned int	i;
+	char	*ptr1;
+	const char *ptr2;
 
 	if (!dest || !src)
 		return (NULL);
+	ptr1 = dest;
+	ptr2 = src;
 	i = 0;
 	while (i < n)
 	{
-		dest[i] = src[i];
-		if (src[i] == c)
-			return (&dest[i]);
+		ptr1[i] = ptr2[i];
+		if (ptr1[i] == c)
+			return (&ptr1[++i]);
 		i++;
 	}
 	return (NULL);
