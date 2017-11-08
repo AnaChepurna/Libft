@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstaddindex.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/08 13:34:03 by achepurn          #+#    #+#             */
+/*   Updated: 2017/11/08 13:34:15 by achepurn         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <libft.h>
 
 void	ft_lstaddindex(t_list **alst, t_list *new, int index)
 {
 	t_list	*current;
 	t_list	*buf;
-	int	i;
+	int		i;
 
 	if (index == 0)
 		ft_lstadd(alst, new);

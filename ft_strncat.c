@@ -6,7 +6,7 @@
 /*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/04 13:19:48 by achepurn          #+#    #+#             */
-/*   Updated: 2017/11/04 14:22:09 by achepurn         ###   ########.fr       */
+/*   Updated: 2017/11/08 14:05:41 by achepurn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strncat(char *dest, const char *src, size_t n)
 	while (dest[i])
 		i++;
 	j = 0;
-	while (src[j] && j < (int) n)
+	while (src[j] && j < (int)n)
 	{
 		dest[i + j] = src[j];
 		j++;

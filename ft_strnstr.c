@@ -6,7 +6,7 @@
 /*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/04 11:37:18 by achepurn          #+#    #+#             */
-/*   Updated: 2017/11/04 13:49:55 by achepurn         ###   ########.fr       */
+/*   Updated: 2017/11/08 14:17:55 by achepurn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	i = 0;
 	sublen = ft_strlen(needle);
 	if (!sublen)
-                return((char *)haystack);
+		return ((char *)haystack);
 	while (haystack[i] && i < (int)len - sublen)
 	{
 		if (ft_strnequ(&haystack[i], needle, sublen))

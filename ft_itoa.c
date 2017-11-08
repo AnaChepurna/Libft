@@ -6,7 +6,7 @@
 /*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/04 12:50:08 by achepurn          #+#    #+#             */
-/*   Updated: 2017/11/04 14:07:21 by achepurn         ###   ########.fr       */
+/*   Updated: 2017/11/08 13:49:04 by achepurn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ static char	*min_int_helper(void)
 
 	min_int = "-2147483648";
 	res = ft_strdup(min_int);
-	return(res);
+	return (res);
 }
 
 char		*ft_itoa(int n)

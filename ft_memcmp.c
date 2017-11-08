@@ -6,7 +6,7 @@
 /*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/04 13:13:36 by achepurn          #+#    #+#             */
-/*   Updated: 2017/11/04 13:14:03 by achepurn         ###   ########.fr       */
+/*   Updated: 2017/11/08 14:10:49 by achepurn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	unsigned int	i;
 	unsigned char	*ptr1;
 	unsigned char	*ptr2;
-	
+
 	if (!s1 || !s2)
 		return (0);
 	ptr1 = (unsigned char *)s1;

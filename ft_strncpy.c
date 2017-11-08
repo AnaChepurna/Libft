@@ -6,7 +6,7 @@
 /*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/26 18:38:10 by achepurn          #+#    #+#             */
-/*   Updated: 2017/11/04 16:51:32 by achepurn         ###   ########.fr       */
+/*   Updated: 2017/11/08 14:05:58 by achepurn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strncpy(char *dst, const char *src, size_t len)
 		dst[i] = src[i];
 		i++;
 	}
-	while (i < (int) len)
+	while (i < (int)len)
 	{
 		dst[i] = '\0';
 		i++;
