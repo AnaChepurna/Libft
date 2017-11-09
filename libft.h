@@ -6,7 +6,7 @@
 /*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/26 16:27:14 by achepurn          #+#    #+#             */
-/*   Updated: 2017/11/08 16:39:22 by achepurn         ###   ########.fr       */
+/*   Updated: 2017/11/09 20:22:14 by achepurn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,8 @@ void				ft_lstaddend(t_list **alst, t_list *new);
 void				ft_lstaddindex(t_list **alst, t_list *new, int index);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
-t_list				*ft_arrtolst(void **arr);
+t_list				*ft_arrtolst(char **arr);
 void				ft_lstprint(t_list *lst);
+int					get_next_line(int fd, char **line);
 
 #endif
