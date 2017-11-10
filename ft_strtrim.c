@@ -6,7 +6,7 @@
 /*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 13:31:13 by achepurn          #+#    #+#             */
-/*   Updated: 2017/11/08 14:07:01 by achepurn         ###   ########.fr       */
+/*   Updated: 2017/11/09 22:42:15 by achepurn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,9 @@ char	*ft_strtrim(char const *s)
 		finish--;
 	res = (char *)malloc(sizeof(char) * (finish - start + 2));
 	if (res)
+	{
 		ft_strncpy(res, &s[start], finish - start + 1);
+		res[finish - start + 1] = '\0';
+	}
 	return (res);
 }

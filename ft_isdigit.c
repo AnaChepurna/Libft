@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/04 11:46:38 by achepurn          #+#    #+#             */
-/*   Updated: 2017/11/04 11:49:41 by achepurn         ###   ########.fr       */
+/*   Created: 2017/11/10 21:32:56 by achepurn          #+#    #+#             */
+/*   Updated: 2017/11/10 21:38:31 by achepurn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-int		isdigit(int c)
+int		ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
 		return (1);

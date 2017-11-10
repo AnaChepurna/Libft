@@ -6,7 +6,7 @@
 /*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/04 13:20:25 by achepurn          #+#    #+#             */
-/*   Updated: 2017/11/08 14:05:17 by achepurn         ###   ########.fr       */
+/*   Updated: 2017/11/10 19:40:13 by achepurn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,11 @@ size_t	ft_strlcat(char *dest, const char *src, size_t l)
 
 	i = 0;
 	j = 0;
+	if (!dest || !src)
+		return (0);
 	while (dest[i])
 		i++;
-	while (src[j] && i + j < l)
+	while (src[j] && (int)i + (int)j < (int)l - 1)
 	{
 		dest[i + j] = src[j];
 		j++;
@@ -29,5 +31,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t l)
 	dest[i + j] = '\0';
 	while (src[j])
 		j++;
+	if (i > l)
+		return (l + j);
 	return (i + j);
 }
