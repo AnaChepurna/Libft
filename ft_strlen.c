@@ -6,7 +6,7 @@
 /*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/26 16:24:26 by achepurn          #+#    #+#             */
-/*   Updated: 2017/11/09 22:41:52 by achepurn         ###   ########.fr       */
+/*   Updated: 2017/11/11 20:29:20 by achepurn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,7 @@ int		ft_strlen(const char *str)
 	int		i;
 
 	i = 0;
-	if (str)
-	{
-		while (str[i])
-			i++;
-	}
+	while (str[i])
+		i++;
 	return (i);
 }

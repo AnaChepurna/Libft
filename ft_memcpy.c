@@ -6,7 +6,7 @@
 /*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/04 13:02:28 by achepurn          #+#    #+#             */
-/*   Updated: 2017/11/08 14:11:16 by achepurn         ###   ########.fr       */
+/*   Updated: 2017/11/11 17:04:21 by achepurn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	char			*ptr1;
 	const char		*ptr2;
 
-	if (!dest || !src)
-		return (NULL);
 	ptr1 = dest;
 	ptr2 = src;
 	i = 0;

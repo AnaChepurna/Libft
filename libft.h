@@ -6,7 +6,7 @@
 /*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/26 16:27:14 by achepurn          #+#    #+#             */
-/*   Updated: 2017/11/10 21:35:18 by achepurn         ###   ########.fr       */
+/*   Updated: 2017/11/11 20:14:42 by achepurn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,10 +44,12 @@ int					ft_strnequ(char const *s1, char const *s2, size_t n);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s);
-char				**strsplit(char const *s, char c);
+char				**ft_strsplit(char const *s, char c);
 char				*ft_itoa(int n);
 char				*ft_itoa_base(int n, int base);
-int					ft_atoi(const char *str);
+long long int		ft_atoill(const char *s);
+long int			ft_atoil(const char *s);
+int					ft_atoi(const char *s);
 int					ft_atoi_base(char *str, int base);
 void				ft_putchar(char c);
 void				ft_putstr(char const *s);
@@ -60,6 +62,7 @@ void				ft_putnbr_fd(int n, int fd);
 void				ft_bzero(void *s, size_t n);
 void				*ft_memset(void *s, int c, size_t n);
 void				*ft_memcpy(void *dest, const void *src, size_t n);
+void				*ft_memccpy(void *dest, const void *src, int c, size_t n);
 void				*ft_memmove(void *dest, const void *src, size_t n);
 void				*ft_memchr(const void *s, int c, size_t n);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);

@@ -6,7 +6,7 @@
 /*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/04 13:21:50 by achepurn          #+#    #+#             */
-/*   Updated: 2017/11/10 21:27:43 by achepurn         ###   ########.fr       */
+/*   Updated: 2017/11/11 17:08:55 by achepurn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ char	*ft_strrchr(const char *s, int c)
 {
 	int		i;
 
-	if (!s)
-		return (NULL);
 	i = 0;
 	while (s[i])
 		i++;

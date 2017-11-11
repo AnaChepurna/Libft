@@ -6,7 +6,7 @@
 /*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/04 13:19:48 by achepurn          #+#    #+#             */
-/*   Updated: 2017/11/08 14:05:41 by achepurn         ###   ########.fr       */
+/*   Updated: 2017/11/11 17:07:35 by achepurn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ char	*ft_strncat(char *dest, const char *src, size_t n)
 	int	i;
 	int	j;
 
-	if (!dest || !src)
-		return (NULL);
 	i = 0;
 	while (dest[i])
 		i++;
