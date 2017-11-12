@@ -18,6 +18,8 @@ void	ft_lstaddindex(t_list **alst, t_list *new, int index)
 	t_list	*buf;
 	int		i;
 
+	if (!alst || !(*alst) || !new)
+		return ;
 	if (index == 0)
 		ft_lstadd(alst, new);
 	else

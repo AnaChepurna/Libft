@@ -14,5 +14,5 @@
 
 int		ft_atoi(const char *s)
 {
-	return ((int)ft_atoil(s));
+	return ((int)ft_atoll(s));
 }

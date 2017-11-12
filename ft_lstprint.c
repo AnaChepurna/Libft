@@ -14,9 +14,12 @@
 
 void	ft_lstprint(t_list *lst)
 {
+	if (!lst)
+		return ;
 	ft_putendl("-------");
 	ft_putstr("content: ");
-	ft_putendl((char *)lst->content);
+	if (lst->content)
+		ft_putendl((char *)lst->content);
 	ft_putstr("content_size: ");
 	ft_putnbr(lst->content_size);
 	ft_putchar('\n');

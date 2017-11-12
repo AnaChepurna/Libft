@@ -12,7 +12,24 @@
 
 #include <libft.h>
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char chr, int fd)
 {
-	write(fd, &c, 1);
+	int	c;
+
+	c = (int)chr;
+	if (ft_isascii(c))
+		write(fd, &c, 1);
+	if (c >= 0x10000 && c <= 0x10FFFF)
+	{
+		ft_putchar_fd(fd, (char)(c >> 18 | 0xF0));
+		ft_putchar_fd(fd, (char)((c >> 12 & 0x3F) | 0x80));
+	}
+	if (c >= 0x800 && c < 0x10000)
+		ft_putchar_fd(fd, (char)(c >> 12 | 0xE0));
+	if (c >= 0x800 && c <= 0x10FFFF)
+		ft_putchar_fd(fd, (char)((c >> 6 & 0x3F) | 0x80));
+	if (c >= 0x80 && c < 0x800)
+		ft_putchar_fd(fd, (char)(c >> 6 | 0xC0));
+	if (c >= 0x80 && c <= 0x10FFFF)
+		ft_putchar_fd(fd, (char)((c & 0x3F) | 0x80));
 }
