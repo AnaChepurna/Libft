@@ -91,5 +91,13 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 t_list				*ft_arrtolst(char **arr);
 void				ft_lstprint(t_list *lst);
 int					get_next_line(int fd, char **line);
+char				*ft_strrev(char *s);
+char				*ft_strrevcpy(const char *s);
+t_list				*ft_strsplitlst(const char *str, char c);
+t_list				*ft_lstget(t_list *begin, int index);
+int					ft_lstgetindex(t_list *begin, t_list *lst);
+int					ft_lstlen(t_list *begin);
+t_list				*ft_lstpop(t_list **alst);
+t_list				*ft_lstrm(t_list *alst, int index);
 
 #endif
