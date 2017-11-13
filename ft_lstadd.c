@@ -6,7 +6,7 @@
 /*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 13:32:36 by achepurn          #+#    #+#             */
-/*   Updated: 2017/11/11 20:18:23 by achepurn         ###   ########.fr       */
+/*   Updated: 2017/11/13 14:56:22 by achepurn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstadd(t_list **alst, t_list *new)
 {
-	if (!alst || !(*alst) || !new)
+	if (!alst || !new)
 		return ;
 	new->next = *alst;
 	*alst = new;
