@@ -6,15 +6,13 @@
 /*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/04 11:55:43 by achepurn          #+#    #+#             */
-/*   Updated: 2017/11/04 11:59:35 by achepurn         ###   ########.fr       */
+/*   Updated: 2017/11/18 22:04:43 by achepurn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int		ft_isascii(int c)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
+	return (c >= 0 && c <= 127);
 }

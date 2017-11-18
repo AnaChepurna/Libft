@@ -6,15 +6,11 @@
 /*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 21:32:56 by achepurn          #+#    #+#             */
-/*   Updated: 2017/11/10 21:38:31 by achepurn         ###   ########.fr       */
+/*   Updated: 2017/11/18 21:23:06 by achepurn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
-
 int		ft_isdigit(int c)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+	return (c >= '0' && c <= '9');
 }

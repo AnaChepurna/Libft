@@ -6,11 +6,11 @@
 /*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/04 13:31:52 by achepurn          #+#    #+#             */
-/*   Updated: 2017/11/04 13:40:13 by achepurn         ###   ########.fr       */
+/*   Updated: 2017/11/18 21:14:18 by achepurn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 static int	is_inmap(char c, char *map, int base)
 {
@@ -45,19 +45,22 @@ int			ft_atoi_base(char *str, int base)
 	int		i;
 	int		result;
 	char	*map;
+	char	c;
 
 	if (!str || base < 2 || base > 36)
 		return (0);
+	if (base == 10)
+		return (ft_atoi(str));
 	map = "0123456789abcdefghijklmnopqrstuvwxyz";
 	result = 0;
 	i = 0;
 	while (str[i] == ' ' || str[i] == '\n' || str[i] == '\t' ||
 			str[i] == '\v' || str[i] == '\r' || str[i] == '\f')
 		i++;
-	while (is_inmap(str[i], map, base))
+	while (is_inmap((c = ft_tolower(str[i])), map, base))
 	{
 		result *= base;
-		result += get_number(str[i], map, base);
+		result += get_number(c, map, base);
 		i++;
 	}
 	return (result);

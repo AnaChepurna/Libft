@@ -6,11 +6,9 @@
 /*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/26 21:07:46 by achepurn          #+#    #+#             */
-/*   Updated: 2017/11/04 12:25:06 by achepurn         ###   ########.fr       */
+/*   Updated: 2017/11/18 21:43:12 by achepurn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <libft.h>
 
 void	ft_striter(char *s, void (*f)(char *))
 {

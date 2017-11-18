@@ -6,11 +6,11 @@
 /*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 14:43:35 by achepurn          #+#    #+#             */
-/*   Updated: 2017/11/13 14:43:36 by achepurn         ###   ########.fr       */
+/*   Updated: 2017/11/18 21:31:18 by achepurn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 t_list	*ft_lstrm(t_list *alst, int index)
 {

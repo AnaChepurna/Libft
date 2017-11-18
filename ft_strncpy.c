@@ -6,11 +6,11 @@
 /*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/26 18:38:10 by achepurn          #+#    #+#             */
-/*   Updated: 2017/11/11 17:06:58 by achepurn         ###   ########.fr       */
+/*   Updated: 2017/11/18 22:01:32 by achepurn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 char	*ft_strncpy(char *dst, const char *src, size_t len)
 {

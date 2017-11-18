@@ -6,11 +6,11 @@
 /*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 10:33:41 by achepurn          #+#    #+#             */
-/*   Updated: 2017/11/04 17:09:53 by achepurn         ###   ########.fr       */
+/*   Updated: 2017/11/18 21:52:07 by achepurn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 char	*ft_strmap(char const *s, char (*f)(char))
 {

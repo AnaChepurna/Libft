@@ -10,7 +10,7 @@ SRC = ft_lstprint.c	ft_striter.c ft_lstrm.c ft_striteri.c \
 	  ft_strncpy.c ft_isdigit.c ft_putchar.c ft_strnequ.c ft_isprint.c \
 	  ft_putchar_fd.c ft_strnew.c ft_itoa.c ft_putendl.c ft_strnstr.c \
 	  ft_itoa_base.c ft_putendl_fd.c ft_strrchr.c ft_lstadd.c ft_putnbr.c \
-	  ft_strrev.c ft_lstaddend.c ft_putnbr_fd.c	ft_strrevcpy.c \
+	  ft_lstaddend.c ft_putnbr_fd.c \
 	  ft_lstaddindex.c	ft_putstr.c	ft_strsplit.c ft_lstdel.c ft_putstr_fd.c \
 	  ft_strsplitlst.c ft_lstdelone.c ft_strcat.c ft_strstr.c \
 	  ft_lstget.c ft_strchr.c ft_strsub.c ft_lstgetindex.c ft_strclr.c \
@@ -26,12 +26,12 @@ $(NAME): $(OBJ)
 	ranlib $(NAME)
 
 %.o: %.c 
-	$(CC) -c $(CFLAGS) -I. libft.h $<
+	$(CC) -c $(CFLAGS) $<
 
 clean:
 	rm -f $(OBJ)
 
 fclean: clean
-	rm -f $(NAME) libft.h.gch
+	rm -f $(NAME)
 
 re: fclean all

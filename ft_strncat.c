@@ -6,11 +6,11 @@
 /*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/04 13:19:48 by achepurn          #+#    #+#             */
-/*   Updated: 2017/11/11 17:07:35 by achepurn         ###   ########.fr       */
+/*   Updated: 2017/11/18 22:00:27 by achepurn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 char	*ft_strncat(char *dest, const char *src, size_t n)
 {

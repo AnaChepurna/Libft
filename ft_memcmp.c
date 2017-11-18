@@ -6,11 +6,11 @@
 /*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/04 13:13:36 by achepurn          #+#    #+#             */
-/*   Updated: 2017/11/11 17:13:49 by achepurn         ###   ########.fr       */
+/*   Updated: 2017/11/18 21:32:43 by achepurn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

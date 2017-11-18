@@ -6,15 +6,11 @@
 /*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/04 11:59:44 by achepurn          #+#    #+#             */
-/*   Updated: 2017/11/04 12:02:17 by achepurn         ###   ########.fr       */
+/*   Updated: 2017/11/18 21:55:54 by achepurn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
-
 int		ft_isprint(int c)
 {
-	if (c >= 32 && c <= 126)
-		return (1);
-	return (0);
+	return (c >= 32 && c <= 126);
 }

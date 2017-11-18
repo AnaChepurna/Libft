@@ -6,11 +6,10 @@
 /*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 14:47:30 by achepurn          #+#    #+#             */
-/*   Updated: 2017/11/13 14:47:34 by achepurn         ###   ########.fr       */
+/*   Updated: 2017/11/18 21:14:45 by achepurn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
 #define LL_MAX 9223372036854775807
 
 long long int		ft_atoll(const char *str)

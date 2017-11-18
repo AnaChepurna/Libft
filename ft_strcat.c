@@ -6,11 +6,9 @@
 /*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/04 13:18:04 by achepurn          #+#    #+#             */
-/*   Updated: 2017/11/11 17:07:11 by achepurn         ###   ########.fr       */
+/*   Updated: 2017/11/18 21:38:52 by achepurn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <libft.h>
 
 char	*ft_strcat(char *dest, const char *src)
 {

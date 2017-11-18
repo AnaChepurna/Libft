@@ -6,11 +6,11 @@
 /*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/04 13:03:25 by achepurn          #+#    #+#             */
-/*   Updated: 2017/11/11 17:04:48 by achepurn         ###   ########.fr       */
+/*   Updated: 2017/11/18 21:33:54 by achepurn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
@@ -18,6 +18,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	const char		*ptr2;
 	unsigned int	i;
 
+	if (!dest && !src)
+		return (dest);
 	ptr1 = dest;
 	ptr2 = src;
 	i = -1;

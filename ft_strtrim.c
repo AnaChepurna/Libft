@@ -6,11 +6,11 @@
 /*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 13:31:13 by achepurn          #+#    #+#             */
-/*   Updated: 2017/11/09 22:42:15 by achepurn         ###   ########.fr       */
+/*   Updated: 2017/11/18 21:57:55 by achepurn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 char	*ft_strtrim(char const *s)
 {

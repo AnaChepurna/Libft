@@ -6,11 +6,11 @@
 /*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/04 12:51:02 by achepurn          #+#    #+#             */
-/*   Updated: 2017/11/04 14:03:02 by achepurn         ###   ########.fr       */
+/*   Updated: 2017/11/18 21:26:50 by achepurn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 static int	a_len(int n, int base)
 {
@@ -50,7 +50,7 @@ char		*ft_itoa_base(int n, int base)
 
 	if (base == 10)
 		return (ft_itoa(n));
-	if (n < 0 || base < 0 || base > 36)
+	if (n < 0 || base < 2 || base > 36)
 		return ("");
 	len = a_len(n, base);
 	res = (char*)malloc(sizeof(char) * len);

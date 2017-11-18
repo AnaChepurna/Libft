@@ -6,13 +6,13 @@
 /*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 16:34:01 by achepurn          #+#    #+#             */
-/*   Updated: 2017/11/11 20:08:01 by achepurn         ###   ########.fr       */
+/*   Updated: 2017/11/18 21:56:46 by achepurn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-static int	split_len(const char *str, char c)
+static int		split_len(const char *str, char c)
 {
 	int		i;
 
@@ -22,7 +22,7 @@ static int	split_len(const char *str, char c)
 	return (++i);
 }
 
-static int	recursive_count(const char *str, char c)
+static int		recursive_count(const char *str, char c)
 {
 	if (*str == c)
 		return (recursive_count(++str, c));
@@ -36,7 +36,7 @@ static int	recursive_count(const char *str, char c)
 		return (0);
 }
 
-static void	recursive_split(char **dst, const char *str, char c)
+static int		recursive_split(char **dst, const char *str, char c)
 {
 	char	*res;
 	int		i;
@@ -45,7 +45,8 @@ static void	recursive_split(char **dst, const char *str, char c)
 		return (recursive_split(dst, ++str, c));
 	if (*str)
 	{
-		res = (char *)malloc(sizeof(char) * split_len(str, c));
+		if (!(res = (char *)malloc(sizeof(char) * split_len(str, c))))
+			return (0);
 		i = 0;
 		while (*str && *str != c)
 		{
@@ -57,11 +58,22 @@ static void	recursive_split(char **dst, const char *str, char c)
 		*dst = res;
 		return (recursive_split(++dst, str, c));
 	}
-	else
-		*dst = NULL;
+	*dst = NULL;
+	return (1);
 }
 
-char		**ft_strsplit(const char *s, char c)
+static void		arr_free(char ***res)
+{
+	int		i;
+
+	i = 0;
+	while (*res[i])
+		free(*res[i++]);
+	free(*res);
+	*res = NULL;
+}
+
+char			**ft_strsplit(const char *s, char c)
 {
 	int		len;
 	char	**res;
@@ -69,8 +81,8 @@ char		**ft_strsplit(const char *s, char c)
 	if (!s)
 		return (NULL);
 	len = recursive_count(s, c);
-	res = (char **)malloc(sizeof(char *) * (len + 1));
-	if (res)
-		recursive_split(res, s, c);
+	if ((res = (char **)malloc(sizeof(char *) * (len + 1))))
+		if (!recursive_split(res, s, c))
+			arr_free(&res);
 	return (res);
 }
