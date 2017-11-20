@@ -6,7 +6,7 @@
 /*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 12:29:58 by achepurn          #+#    #+#             */
-/*   Updated: 2017/11/18 21:57:35 by achepurn         ###   ########.fr       */
+/*   Updated: 2017/11/20 11:57:10 by achepurn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
 	char	*res;
-	int		i;
+	size_t	i;
 
 	if (!s)
 		return (NULL);
@@ -23,7 +23,7 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	if (res)
 	{
 		i = 0;
-		while (i < (int)len)
+		while (i < len)
 		{
 			res[i] = s[start + i];
 			i++;

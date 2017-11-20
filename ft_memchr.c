@@ -6,7 +6,7 @@
 /*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/04 13:12:17 by achepurn          #+#    #+#             */
-/*   Updated: 2017/11/18 21:32:21 by achepurn         ###   ########.fr       */
+/*   Updated: 2017/11/20 11:37:37 by achepurn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,11 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned int	i;
+	size_t			i;
 	const char		*ptr;
 
+	if (!s)
+		return (NULL);
 	ptr = s;
 	i = 0;
 	while (i < n)

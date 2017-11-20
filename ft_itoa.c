@@ -6,15 +6,15 @@
 /*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/04 12:50:08 by achepurn          #+#    #+#             */
-/*   Updated: 2017/11/18 22:05:01 by achepurn         ###   ########.fr       */
+/*   Updated: 2017/11/20 18:20:47 by achepurn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	a_len(int n)
+static size_t	a_len(int n)
 {
-	int	res;
+	size_t	res;
 
 	if (n == 0)
 		return (2);
@@ -29,7 +29,7 @@ static int	a_len(int n)
 	return (res);
 }
 
-static void	put_a(int n, char *str, int len)
+static void		put_a(int n, char *str, int len)
 {
 	unsigned int	nb;
 
@@ -47,10 +47,10 @@ static void	put_a(int n, char *str, int len)
 	str[len] = nb + '0';
 }
 
-char		*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	char	*res;
-	int		len;
+	size_t	len;
 
 	len = a_len(n);
 	res = (char*)malloc(sizeof(char) * len);

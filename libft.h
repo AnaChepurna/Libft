@@ -6,7 +6,7 @@
 /*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/26 16:27:14 by achepurn          #+#    #+#             */
-/*   Updated: 2017/11/18 20:24:02 by achepurn         ###   ########.fr       */
+/*   Updated: 2017/11/20 18:36:40 by achepurn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
+
+# define LL_MAX 9223372036854775807
 
 typedef struct		s_list
 {

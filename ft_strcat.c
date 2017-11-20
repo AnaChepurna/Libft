@@ -6,14 +6,18 @@
 /*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/04 13:18:04 by achepurn          #+#    #+#             */
-/*   Updated: 2017/11/18 21:38:52 by achepurn         ###   ########.fr       */
+/*   Updated: 2017/11/20 11:58:21 by achepurn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strcat(char *dest, const char *src)
 {
 	int		i;
 
+	if (!dest || !src)
+		return (NULL);
 	i = 0;
 	while (dest[i])
 		i++;

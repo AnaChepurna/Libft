@@ -6,7 +6,7 @@
 /*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/04 13:20:25 by achepurn          #+#    #+#             */
-/*   Updated: 2017/11/18 21:59:57 by achepurn         ###   ########.fr       */
+/*   Updated: 2017/11/20 11:49:58 by achepurn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ size_t	ft_strlcat(char *dest, const char *src, size_t l)
 	size_t	i;
 	size_t	j;
 
+	if (!dest || !src)
+		return (0);
 	i = 0;
 	j = 0;
 	while (dest[i])

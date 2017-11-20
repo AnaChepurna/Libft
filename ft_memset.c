@@ -6,7 +6,7 @@
 /*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/04 12:59:33 by achepurn          #+#    #+#             */
-/*   Updated: 2017/11/18 21:34:10 by achepurn         ###   ########.fr       */
+/*   Updated: 2017/11/20 11:41:53 by achepurn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,14 @@
 
 void	*ft_memset(void *memptr, int val, size_t num)
 {
-	int				i;
+	size_t			i;
 	unsigned char	*buf;
 
+	if (!memptr)
+		return (NULL);
 	i = 0;
 	buf = memptr;
-	while (i < (int)num)
+	while (i < num)
 	{
 		buf[i] = (unsigned char)val;
 		i++;
