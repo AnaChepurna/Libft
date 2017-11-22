@@ -6,7 +6,7 @@
 /*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 16:34:01 by achepurn          #+#    #+#             */
-/*   Updated: 2017/11/18 21:56:46 by achepurn         ###   ########.fr       */
+/*   Updated: 2017/11/22 13:17:29 by achepurn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,8 +67,8 @@ static void		arr_free(char ***res)
 	int		i;
 
 	i = 0;
-	while (*res[i])
-		free(*res[i++]);
+	while ((*res)[i])
+		free((*res)[i++]);
 	free(*res);
 	*res = NULL;
 }
