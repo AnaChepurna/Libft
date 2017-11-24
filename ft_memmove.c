@@ -6,7 +6,7 @@
 /*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/04 13:03:25 by achepurn          #+#    #+#             */
-/*   Updated: 2017/11/20 11:40:36 by achepurn         ###   ########.fr       */
+/*   Updated: 2017/11/24 14:52:00 by achepurn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	const char		*ptr2;
 	size_t			i;
 
-	if (!dest || !src)
+	if (!dest || !src || !n || dest == src)
 		return (dest);
 	ptr1 = dest;
 	ptr2 = src;
