@@ -6,14 +6,17 @@
 #    By: achepurn <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/19 16:42:13 by achepurn          #+#    #+#              #
-#    Updated: 2017/11/19 16:47:49 by achepurn         ###   ########.fr        #
+#    Updated: 2017/11/25 17:59:10 by achepurn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-SRC = ft_lstprint.c	ft_striter.c ft_lstrm.c ft_striteri.c \
+INCL = ./
+SRC = src/
+OBJ = obj/
+FILES = ft_lstprint.c	ft_striter.c ft_lstrm.c ft_striteri.c \
 	  ft_arrtolst.c ft_memalloc.c ft_strjoin.c ft_atoi.c \
 	  ft_memccpy.c ft_strlcat.c ft_atoi_base.c ft_memchr.c \
 	  ft_strlen.c ft_atoll.c ft_memcmp.c ft_strmap.c ft_bzero.c	\
@@ -29,19 +32,22 @@ SRC = ft_lstprint.c	ft_striter.c ft_lstrm.c ft_striteri.c \
 	  ft_strtrim.c ft_lstiter.c ft_strcmp.c ft_tolower.c ft_lstlen.c \
 	  ft_strcpy.c ft_toupper.c ft_lstmap.c ft_strdel.c \
 	  ft_lstnew.c ft_strdup.c ft_lstpop.c ft_strequ.c
-OBJ = $(SRC:.c=.o)
+O_FILES = $(addprefix $(OBJ), $(FILES:.c=.o))
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	ar rc $(NAME) $(OBJ)
+$(NAME): $(OBJ) $(O_FILES)
+	ar rc $(NAME) $(OBJ)*
 	ranlib $(NAME)
 
-%.o: %.c 
-	$(CC) -c $(CFLAGS) $<
+$(OBJ):
+	mkdir -p $@
+
+$(OBJ)%.o: $(SRC)%.c
+	$(CC) -c $(CFLAGS) -I $(INCL) $< -o $@
 
 clean:
-	rm -f $(OBJ)
+	rm -rf $(OBJ)
 
 fclean: clean
 	rm -f $(NAME)
