@@ -6,7 +6,7 @@
 #    By: achepurn <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/19 16:42:13 by achepurn          #+#    #+#              #
-#    Updated: 2017/11/25 17:59:10 by achepurn         ###   ########.fr        #
+#    Updated: 2017/11/25 18:26:16 by achepurn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,7 @@ O_FILES = $(addprefix $(OBJ), $(FILES:.c=.o))
 all: $(NAME)
 
 $(NAME): $(OBJ) $(O_FILES)
-	ar rc $(NAME) $(OBJ)*
+	ar rc $(NAME) $(O_FILES)
 	ranlib $(NAME)
 
 $(OBJ):
