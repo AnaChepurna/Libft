@@ -6,13 +6,13 @@
 /*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 14:44:42 by achepurn          #+#    #+#             */
-/*   Updated: 2017/11/18 21:29:55 by achepurn         ###   ########.fr       */
+/*   Updated: 2017/11/25 22:47:35 by achepurn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_lstlen(t_list *begin)
+size_t	ft_lstlen(t_list *begin)
 {
 	if (!begin)
 		return (0);

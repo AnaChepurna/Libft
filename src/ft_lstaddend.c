@@ -6,7 +6,7 @@
 /*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 13:33:48 by achepurn          #+#    #+#             */
-/*   Updated: 2017/11/18 21:28:01 by achepurn         ###   ########.fr       */
+/*   Updated: 2017/11/25 18:55:08 by achepurn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,15 @@ void	ft_lstaddend(t_list **alst, t_list *new)
 {
 	t_list	*current;
 
-	if (!alst || !(*alst) || !new)
+	if (!alst || !new)
 		return ;
-	current = *alst;
-	while (current->next)
-		current = current->next;
-	current->next = new;
+	if (!(*alst))
+		*alst = new;
+	else
+	{
+		current = *alst;
+		while (current->next)
+			current = current->next;
+		current->next = new;
+	}
 }

@@ -6,7 +6,7 @@
 /*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/26 16:27:14 by achepurn          #+#    #+#             */
-/*   Updated: 2017/11/20 18:36:40 by achepurn         ###   ########.fr       */
+/*   Updated: 2017/11/25 22:29:13 by achepurn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,8 +96,10 @@ int					get_next_line(int fd, char **line);
 t_list				*ft_strsplitlst(const char *str, char c);
 t_list				*ft_lstget(t_list *begin, int index);
 int					ft_lstgetindex(t_list *begin, t_list *lst);
-int					ft_lstlen(t_list *begin);
+size_t				ft_lstlen(t_list *begin);
 t_list				*ft_lstpop(t_list **alst);
 t_list				*ft_lstrm(t_list *alst, int index);
+char				**ft_lsttoarr(t_list *lst);
+void				ft_arrfree(char ***res);
 
 #endif

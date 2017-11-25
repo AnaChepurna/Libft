@@ -6,7 +6,7 @@
 /*   By: achepurn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 16:34:01 by achepurn          #+#    #+#             */
-/*   Updated: 2017/11/22 13:17:29 by achepurn         ###   ########.fr       */
+/*   Updated: 2017/11/25 21:53:17 by achepurn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,17 +62,6 @@ static int		recursive_split(char **dst, const char *str, char c)
 	return (1);
 }
 
-static void		arr_free(char ***res)
-{
-	int		i;
-
-	i = 0;
-	while ((*res)[i])
-		free((*res)[i++]);
-	free(*res);
-	*res = NULL;
-}
-
 char			**ft_strsplit(const char *s, char c)
 {
 	int		len;
@@ -83,6 +72,6 @@ char			**ft_strsplit(const char *s, char c)
 	len = recursive_count(s, c);
 	if ((res = (char **)malloc(sizeof(char *) * (len + 1))))
 		if (!recursive_split(res, s, c))
-			arr_free(&res);
+			ft_arrfree(&res);
 	return (res);
 }
